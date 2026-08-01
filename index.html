@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Privacy Policy for the ezy Youtube Video Control Chrome extension">
+  <title>Privacy Policy - ezy Youtube Video Control</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: #f5f6fa;
+      color: #202124;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.65;
+    }
+    main {
+      box-sizing: border-box;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px;
+      border: 1px solid #e2e5ea;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(20, 24, 35, .07);
+    }
+    h1 { margin-top: 0; color: #d93025; line-height: 1.25; }
+    h2 { margin-top: 30px; line-height: 1.35; }
+    code { padding: 2px 5px; border-radius: 4px; background: #f0f1f3; }
+    .updated { color: #5f6368; }
+    .ko { margin-top: 42px; padding-top: 24px; border-top: 1px solid #e2e5ea; }
+    @media (max-width: 600px) { body { padding: 16px; } main { padding: 24px; } }
+    @media (prefers-color-scheme: dark) {
+      body { background: #111318; color: #e8eaed; }
+      main { border-color: #34373d; background: #1c1f24; }
+      h1 { color: #ff6b61; }
+      code { background: #303238; }
+      .updated { color: #aeb4bc; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Privacy Policy for ezy Youtube Video Control</h1>
+    <p class="updated"><strong>Last updated: August 1, 2026</strong></p>
+
+    <h2>1. Scope</h2>
+    <p>This policy explains how <strong>ezy Youtube Video Control</strong> ("the extension") handles information while providing YouTube viewing and player-customization features. The extension is independently developed and is not affiliated with, endorsed by, or sponsored by YouTube or Google.</p>
+
+    <h2>2. Information the Extension Accesses</h2>
+    <ul>
+      <li><strong>Extension preferences:</strong> aspect ratio, video flips and filters, Video Focus Mode, playback speed, mouse-wheel behavior, preferred quality, Theater Mode, Auto PiP, list-view and Shorts options, caption language, playlist controls, and keyboard shortcuts.</li>
+      <li><strong>Current YouTube page state:</strong> the current YouTube URL and the page/player elements required to apply the user's selected settings. This processing occurs inside the YouTube page.</li>
+    </ul>
+    <p>The extension does not record or build a history of the videos or pages the user visits.</p>
+
+    <h2>3. Collection, Use, and Storage</h2>
+    <ul>
+      <li>The developer does not collect personal information, browsing or video history, communications, authentication data, financial data, or location data.</li>
+      <li>The extension does not transmit user information to the developer or any developer-operated server.</li>
+      <li>Preferences are stored with Chrome's <code>chrome.storage.sync</code> API solely to remember and synchronize the user's settings. When Chrome Sync is enabled, Chrome may synchronize those preferences through the user's Google account according to the user's Chrome settings and Google's privacy terms.</li>
+      <li>Current page and player state is processed temporarily in the browser to provide the extension's features and is not retained or shared by the extension.</li>
+    </ul>
+
+    <h2>4. Permissions</h2>
+    <ul>
+      <li><strong><code>storage</code>:</strong> Saves and synchronizes the user's extension preferences.</li>
+      <li><strong><code>https://www.youtube.com/*</code>:</strong> Runs packaged scripts and styles on YouTube pages to apply the player, layout, caption, playlist, recommendation, and Shorts features selected by the user.</li>
+    </ul>
+    <p>The extension does not request the <code>tabs</code>, <code>activeTab</code>, <code>scripting</code>, browsing-history, identity, cookies, or web-request permissions.</p>
+
+    <h2>5. Sharing, Advertising, and Remote Code</h2>
+    <ul>
+      <li>No user information is sold, rented, shared, or transferred to third parties by the developer.</li>
+      <li>The extension contains no advertising, analytics, or tracking technology.</li>
+      <li>The extension does not download or execute remote code. All executable code is included in the extension package.</li>
+      <li>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</li>
+    </ul>
+
+    <h2>6. Retention and User Control</h2>
+    <p>Preferences remain in Chrome storage until the user resets the extension settings, removes the extension, clears its stored data, or removes synchronized data through Chrome. The developer cannot access or delete this data because it is never received by the developer.</p>
+
+    <h2>7. Policy Changes</h2>
+    <p>If information-handling practices change, this policy and any required in-product or store disclosures will be updated before the changed practice takes effect.</p>
+
+    <h2>8. Contact</h2>
+    <p>Questions about this policy may be sent to <strong>ohnagi@gmail.com</strong>.</p>
+
+    <section class="ko" lang="ko">
+      <h2>한국어 요약</h2>
+      <ul>
+        <li>기능 제공을 위해 현재 YouTube 페이지의 URL·플레이어 상태와 사용자가 선택한 설정만 브라우저 안에서 처리합니다.</li>
+        <li>개인정보·시청 기록·브라우징 기록을 개발자가 수집하거나 외부 서버로 전송하지 않습니다.</li>
+        <li>설정은 <code>chrome.storage.sync</code>에 저장되며 Chrome 동기화가 켜진 경우 사용자의 Chrome 설정과 Google 정책에 따라 동기화될 수 있습니다.</li>
+        <li>광고·분석·추적·원격 코드가 없으며, 사용 권한은 <code>storage</code>와 <code>https://www.youtube.com/*</code>로 제한됩니다.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
