@@ -1,6 +1,6 @@
 # Privacy Policy for ezy Youtube Video Control
 
-**Last updated: August 1, 2026**
+**Last updated: August 6, 2026**
 
 ## 1. Scope
 
@@ -12,7 +12,7 @@ The extension is independently developed and is not affiliated with, endorsed by
 
 The extension accesses only the information required to provide its user-facing features:
 
-- **Extension preferences:** aspect ratio, video flips and filters, Video Focus Mode, playback speed, mouse-wheel behavior, preferred quality, Theater Mode, Auto PiP, list-view and Shorts options, caption language, playlist controls, and keyboard shortcuts.
+- **Extension preferences:** aspect ratio, video flips and filters, Video Focus Mode, playback speed, mouse-wheel behavior, preferred quality, Theater Mode, Auto PiP, list-view and Shorts options, video-list filter settings (including any channel names or title keywords you type into the exclusion fields), caption language, playlist controls, and keyboard shortcuts.
 - **Current YouTube page state:** the current YouTube URL and the page/player elements needed to apply the selected settings. This processing occurs inside the active YouTube page.
 
 The extension does not record or build a history of the videos or pages you visit.
@@ -54,7 +54,7 @@ Questions about this policy may be sent to `ohnagi@gmail.com`.
 
 ## 한국어 요약
 
-- 확장 프로그램은 기능 제공을 위해 현재 YouTube 페이지의 URL·플레이어 상태와 사용자가 선택한 설정만 브라우저 안에서 처리합니다.
+- 확장 프로그램은 기능 제공을 위해 현재 YouTube 페이지의 URL·플레이어 상태와 사용자가 선택한 설정(제외 채널·제외 키워드로 직접 입력한 문자열 포함)만 브라우저 안에서 처리합니다.
 - 개인정보·시청 기록·브라우징 기록을 개발자가 수집하거나 외부 서버로 전송하지 않습니다.
 - 설정은 `chrome.storage.sync`에 저장되며 Chrome 동기화가 켜진 경우 사용자의 Chrome 설정과 Google 정책에 따라 동기화될 수 있습니다.
 - 광고·분석·추적·원격 코드가 없으며, 사용 권한은 `storage`와 `https://www.youtube.com/*`로 제한됩니다.
