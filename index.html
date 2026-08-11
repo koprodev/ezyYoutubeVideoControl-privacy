@@ -3,97 +3,132 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Privacy Policy for the ezy Youtube Video Control Chrome extension">
   <title>Privacy Policy - ezy Youtube Video Control</title>
   <style>
     :root { color-scheme: light dark; }
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      background: #f5f6fa;
-      color: #202124;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.65;
-    }
-    main {
-      box-sizing: border-box;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px;
-      border: 1px solid #e2e5ea;
-      border-radius: 16px;
-      background: #fff;
-      box-shadow: 0 8px 30px rgba(20, 24, 35, .07);
-    }
+    body { margin: 0; padding: 40px 20px; background: #f5f6fa; color: #202124; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.65; }
+    main { box-sizing: border-box; max-width: 900px; margin: 0 auto; padding: 40px; border: 1px solid #e2e5ea; border-radius: 16px; background: #fff; box-shadow: 0 8px 30px rgba(20, 24, 35, .07); }
     h1 { margin-top: 0; color: #d93025; line-height: 1.25; }
     h2 { margin-top: 30px; line-height: 1.35; }
     code { padding: 2px 5px; border-radius: 4px; background: #f0f1f3; }
     .updated { color: #5f6368; }
+    .notice { padding: 16px 18px; border-left: 4px solid #3ea6ff; border-radius: 6px; background: #eef7ff; }
     .ko { margin-top: 42px; padding-top: 24px; border-top: 1px solid #e2e5ea; }
-    @media (max-width: 600px) { body { padding: 16px; } main { padding: 24px; } }
     @media (prefers-color-scheme: dark) {
       body { background: #111318; color: #e8eaed; }
       main { border-color: #34373d; background: #1c1f24; }
       h1 { color: #ff6b61; }
       code { background: #303238; }
       .updated { color: #aeb4bc; }
+      .notice { background: #182b3a; }
     }
   </style>
 </head>
 <body>
   <main>
     <h1>Privacy Policy for ezy Youtube Video Control</h1>
-    <p class="updated"><strong>Last updated: August 6, 2026</strong></p>
+    <p class="updated"><strong>Last updated: August 11, 2026</strong></p>
 
     <h2>1. Scope</h2>
-    <p>This policy explains how <strong>ezy Youtube Video Control</strong> ("the extension") handles information while providing YouTube viewing and player-customization features. The extension is independently developed and is not affiliated with, endorsed by, or sponsored by YouTube or Google.</p>
+    <p>This policy explains how <strong>ezy Youtube Video Control</strong> ("the extension") handles information while providing YouTube viewing, player-control, navigation, and page-layout features. The extension is independently developed and is not affiliated with, endorsed by, or sponsored by YouTube or Google.</p>
 
-    <h2>2. Information the Extension Accesses</h2>
+    <h2>2. Information the Extension Handles</h2>
     <ul>
-      <li><strong>Extension preferences:</strong> aspect ratio, video flips and filters, Video Focus Mode, playback speed, mouse-wheel behavior, preferred quality, Theater Mode, Auto PiP, list-view and Shorts options, video-list filter settings (including any channel names or title keywords you type into the exclusion fields), caption language, playlist controls, and keyboard shortcuts.</li>
-      <li><strong>Current YouTube page state:</strong> the current YouTube URL and the page/player elements required to apply the user's selected settings. This processing occurs inside the YouTube page.</li>
+      <li><strong>Saved preferences:</strong> player, layout, list-filter, caption, playlist, Shorts, chapter-dot, video-summary, and keyboard-shortcut settings, including channel names, handles, or title keywords entered into exclusion fields.</li>
+      <li><strong>Current YouTube page and website content:</strong> the current URL and video identifier; page and player state; visible title, channel, view-count, duration, upload-time, watched, live, and upcoming indicators; caption/player information; chapter titles and times; and, when Video Summary is enabled, the answer returned in YouTube's native Ask panel.</li>
+      <li><strong>Limited YouTube Ask conversation text:</strong> when Video Summary is enabled and the native Ask panel already contains a conversation, the extension checks existing user turns for the fixed localized summary wording and finds the latest completed summary answer. This is used only to avoid a duplicate request and reuse an existing summary. Non-summary turns are not copied or retained.</li>
+      <li><strong>Feature interactions:</strong> relevant keyboard, mouse-wheel, click, scroll, and playback events are processed in real time to perform selected actions. They are not logged as an activity history.</li>
+      <li><strong>Optional Google account authorization:</strong> only when the user selects <strong>Connect Google account</strong>, the browser's Identity web-auth flow opens Google's account chooser for the Google Drive <code>appDataFolder</code> scope. This login is independent of the browser profile. After connection, the extension reads the current Drive user's display name and email address through the Drive <code>about</code> resource so the popup can identify the connected account. It does not request separate email/profile OAuth scopes, contacts, or general Drive files. It may also read limited file metadata already present in its hidden app-only folder to confirm access.</li>
+      <li><strong>Optional settings synchronization and backups:</strong> when enabled or manually requested, the extension stores synchronized preference values, per-setting modification timestamps, a random device identifier, schema/revision metadata, and up to five backup snapshots in its hidden Google Drive <code>appDataFolder</code>.</li>
+      <li><strong>Optional channel-folder management:</strong> when enabled, the extension stores user-created folder names and order, channel IDs, titles, page and thumbnail URLs, folder assignments, ordering, modification metadata, and deletion markers locally. If channel sync is enabled, the same <code>channel-library.json</code> document is stored in the hidden Google Drive <code>appDataFolder</code>. After explicit subscription-list connection, the YouTube Data API supplies current subscription IDs and limited subscribed-channel metadata.</li>
+      <li><strong>Optional YouTube subscription removal:</strong> only after the user selects subscribed channels, presses the separate unsubscribe control, and confirms its warning, the extension sends those subscription IDs to the YouTube Data API for removal. Folder deletion and moving a channel between extension folders never unsubscribe the user.</li>
     </ul>
-    <p>The extension does not record or build a history of the videos or pages the user visits.</p>
+    <p>The extension does not create or retain a history of videos or pages the user visits.</p>
 
-    <h2>3. Collection, Use, and Storage</h2>
+    <h2>3. How Information Is Used and Stored</h2>
     <ul>
-      <li>The developer does not collect personal information, browsing or video history, communications, authentication data, financial data, or location data.</li>
-      <li>The extension does not transmit user information to the developer or any developer-operated server.</li>
-      <li>Preferences are stored with Chrome's <code>chrome.storage.sync</code> API solely to remember and synchronize the user's settings. When Chrome Sync is enabled, Chrome may synchronize those preferences through the user's Google account according to the user's Chrome settings and Google's privacy terms.</li>
-      <li>Current page and player state is processed temporarily in the browser to provide the extension's features and is not retained or shared by the extension.</li>
-    </ul>
-
-    <h2>4. Permissions</h2>
-    <ul>
-      <li><strong><code>storage</code>:</strong> Saves and synchronizes the user's extension preferences.</li>
-      <li><strong><code>https://www.youtube.com/*</code>:</strong> Runs packaged scripts and styles on YouTube pages to apply the player, layout, caption, playlist, recommendation, and Shorts features selected by the user.</li>
-    </ul>
-    <p>The extension does not request the <code>tabs</code>, <code>activeTab</code>, <code>scripting</code>, browsing-history, identity, cookies, or web-request permissions.</p>
-
-    <h2>5. Sharing, Advertising, and Remote Code</h2>
-    <ul>
-      <li>No user information is sold, rented, shared, or transferred to third parties by the developer.</li>
-      <li>The extension contains no advertising, analytics, or tracking technology.</li>
-      <li>The extension does not download or execute remote code. All executable code is included in the extension package.</li>
-      <li>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</li>
+      <li>Preferences are stored locally on the current browser profile with Chrome's <code>chrome.storage.local</code> API. New preference changes are not transmitted through Chrome Sync. On the first run after upgrading, existing preference keys are copied once from legacy <code>chrome.storage.sync</code> storage into local storage. Google Drive synchronization remains off by default and exchanges non-device-local settings only after the user enables it.</li>
+      <li>Current page content, page state, chapter data, and interaction events are processed temporarily in the current tab only to provide selected features. They are not sent to the developer or stored as browsing history.</li>
+      <li>Google account connection is optional. An interactive chooser opens only after an explicit button click; a previously authorized connection may be checked or renewed silently. OAuth access tokens remain only in the background service worker and <code>chrome.storage.session</code>. The display name is not stored. While connected, the email address is stored locally as an OAuth <code>login_hint</code> so renewal remains bound to the selected account, and is removed on Disconnect.</li>
+      <li>Settings synchronization is local-first and optional. When enabled, <code>settings.json</code> is merged using per-setting timestamps and a random device identifier. The extension checks shortly after local changes and approximately every two minutes. Only the five newest manual or automatic safety backups are retained. Turning sync off stops Drive exchange without deleting cloud files.</li>
+      <li>Channel-folder management is off by default and local-first. It replaces YouTube's native subscription section only after its own section mounts successfully and restores the native section when disabled or unavailable. Folder selection and expansion are device-local UI state. Separately enabled channel sync exchanges <code>channel-library.json</code> with <code>appDataFolder</code> approximately every two minutes.</li>
+      <li>YouTube subscription access is requested incrementally only after the user explicitly connects the list in the channel manager. The subscription list is held in a short in-memory cache and normalized into the local channel library. Unsubscribe requests are never scheduled and never result from folder editing.</li>
+      <li>The developer operates no data-collection server and receives no preferences, page content, prompts, summary responses, analytics, or telemetry from the extension.</li>
     </ul>
 
-    <h2>6. Retention and User Control</h2>
-    <p>Preferences remain in Chrome storage until the user resets the extension settings, removes the extension, clears its stored data, or removes synchronized data through Chrome. The developer cannot access or delete this data because it is never received by the developer.</p>
+    <h2>4. Video Summary: YouTube Ask Processing</h2>
+    <div class="notice">
+      <p><strong>Video Summary is experimental and off by default.</strong> If enabled, on each eligible video the extension uses YouTube's native Ask panel and automatically submits one fixed localized request, such as “Summarize this video” or “동영상을 요약해 줘.” The intended recipient is YouTube Ask.</p>
+    </div>
+    <ul>
+      <li>The request is handled in the current YouTube page by Google/YouTube. Google/YouTube may process the prompt, current video, account, and page context according to the user's settings and Google's policies.</li>
+      <li>The extension reads the returned answer and keeps a cloned copy only in the current tab's memory. It discards that copy when the feature is disabled, the page navigates, or the tab reloads.</li>
+      <li>The developer does not receive the prompt, video context, or answer. YouTube may retain its native Ask conversation under its own service behavior and policies; the extension does not control or delete YouTube's copy.</li>
+      <li>If the native Ask panel already contains a conversation, the extension reads existing turn text only to determine whether the same summary was previously requested. It reuses the latest completed answer or stops without adding a new question. Unrelated conversation turns are not stored.</li>
+      <li>If YouTube Ask is unavailable, the extension does not send the request through an alternate service.</li>
+    </ul>
 
-    <h2>7. Policy Changes</h2>
-    <p>If information-handling practices change, this policy and any required in-product or store disclosures will be updated before the changed practice takes effect.</p>
+    <h2>5. Sharing and Service Providers</h2>
+    <p>The developer does not sell, rent, share, or transfer user information. External processing connected to user-selected features is limited to:</p>
+    <ul>
+      <li><strong>Legacy Google Chrome Sync storage:</strong> an earlier version may have synchronized saved preferences. The current version reads those existing extension preference keys once for local migration, leaves the legacy copy unchanged, and does not send new preference changes through Chrome Sync.</li>
+      <li><strong>Google/YouTube Ask:</strong> processes the fixed summary request and relevant current-video context only when Video Summary is enabled and YouTube Ask is available.</li>
+      <li><strong>Google OAuth web authorization and Google Drive API:</strong> the browser Identity API opens Google's web account chooser independently of the browser profile. The Drive API accesses this extension's hidden <code>appDataFolder</code>, returns the current user's display name and email address, and—only for enabled sync or requested backup/restore—stores and retrieves settings JSON documents.</li>
+      <li><strong>YouTube Data API:</strong> after explicit subscription-list connection, reads current subscriptions and limited channel metadata for Channel Folders. It removes subscriptions only after a separate selection and confirmation flow. The developer does not receive these requests or results.</li>
+    </ul>
+    <p>The extension shares no data with advertising networks, analytics providers, data brokers, or developer-operated services.</p>
 
-    <h2>8. Contact</h2>
+    <h2>6. Permissions</h2>
+    <ul>
+      <li><strong><code>storage</code>:</strong> saves preferences, synchronization metadata, a random device identifier, and the connected-account renewal hint locally and reads legacy synchronized preference keys during one-time migration.</li>
+      <li><strong><code>identity</code>:</strong> opens the browser's OAuth web-auth flow after an explicit action. Initial Drive connection requests <code>https://www.googleapis.com/auth/drive.appdata</code>. If the user later chooses to connect subscriptions in Channel Folders, the extension incrementally requests <code>https://www.googleapis.com/auth/youtube</code> to view and manage current subscriptions and perform user-confirmed unsubscription. No separate email/profile OAuth scope is requested.</li>
+      <li><strong><code>alarms</code>:</strong> schedules optional settings synchronization approximately every two minutes and provides a fallback for deferred uploads while the service worker is suspended.</li>
+      <li><strong><code>https://www.youtube.com/*</code>:</strong> runs packaged scripts and styles on YouTube pages to apply selected player, layout, list-filter, chapter, summary, caption, playlist, recommendation, and Shorts features.</li>
+      <li><strong><code>https://www.googleapis.com/*</code>:</strong> calls the Drive API for app-only settings/channel data and, after explicit subscription connection, calls the YouTube Data API to read subscriptions or perform user-confirmed unsubscription.</li>
+      <li><strong><code>https://oauth2.googleapis.com/*</code>:</strong> requests revocation of the current OAuth access token when the user disconnects the account.</li>
+    </ul>
+    <p>The extension does not request <code>identity.email</code>, <code>tabs</code>, <code>activeTab</code>, <code>scripting</code>, browsing-history, cookies, or web-request permissions.</p>
+
+    <h2>7. Advertising, Analytics, and Remote Code</h2>
+    <ul>
+      <li>No advertising, analytics, tracking, or telemetry is included.</li>
+      <li>The extension does not download or execute remote code. All executable logic is included in the extension package.</li>
+      <li>Interacting with YouTube's existing page and native Ask service does not download executable logic into the extension.</li>
+    </ul>
+
+    <h2>8. Retention and User Control</h2>
+    <ul>
+      <li>Local preferences remain in Chrome storage until the user resets or removes the extension or clears its storage. A legacy synchronized copy from an earlier version may remain temporarily for rollback compatibility until the user removes synchronized data or a later migration explicitly cleans it up. The developer cannot access or delete either copy.</li>
+      <li>Current page state, chapter data, interaction events, and the extension's temporary summary copy are discarded when no longer needed, including on navigation, reload, tab closure, or feature disablement as applicable.</li>
+      <li>Google OAuth access tokens remain only in service-worker memory and <code>chrome.storage.session</code> and are silently renewed when Google permits it. Disconnecting disables sync, clears the locally stored email renewal hint and session token, and requests token revocation, but does not delete existing <code>appDataFolder</code> data.</li>
+      <li>Cloud <code>settings.json</code> and the five newest backups remain when sync is turned off or the account is disconnected. Restoring creates a safety backup first. Sync OFF and Disconnect do not imply cloud-data deletion.</li>
+      <li>Local channel folders and assignments remain until edited/reset, extension removal, or storage clearing. If channel sync is enabled, <code>channel-library.json</code> remains in <code>appDataFolder</code> after sync is turned off or the account is disconnected. The subscription-list cache expires after approximately five minutes. Confirmed YouTube unsubscription is not restored by extension folder data.</li>
+      <li>Legacy data retained by Chrome Sync and data retained by YouTube are controlled by Google and the user's Google/Chrome settings and are subject to Google's policies.</li>
+    </ul>
+
+    <h2>9. Limited Use</h2>
+    <p>Information is handled only to provide or improve the extension's disclosed single purpose and user-facing features. It is not used for advertising, creditworthiness, unrelated analytics, or sale to third parties, and the developer does not permit humans to read it.</p>
+    <p><strong>The use of information received from Google APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.</strong></p>
+
+    <h2>10. Policy Changes</h2>
+    <p>If information-handling practices change, this policy, the Chrome Web Store disclosures, and any required in-product disclosure will be updated before the changed practice takes effect.</p>
+
+    <h2>11. Contact</h2>
     <p>Questions about this policy may be sent to <strong>ohnagi@gmail.com</strong>.</p>
 
     <section class="ko" lang="ko">
       <h2>한국어 요약</h2>
       <ul>
-        <li>기능 제공을 위해 현재 YouTube 페이지의 URL·플레이어 상태와 사용자가 선택한 설정(제외 채널·제외 키워드로 직접 입력한 문자열 포함)만 브라우저 안에서 처리합니다.</li>
-        <li>개인정보·시청 기록·브라우징 기록을 개발자가 수집하거나 외부 서버로 전송하지 않습니다.</li>
-        <li>설정은 <code>chrome.storage.sync</code>에 저장되며 Chrome 동기화가 켜진 경우 사용자의 Chrome 설정과 Google 정책에 따라 동기화될 수 있습니다.</li>
-        <li>광고·분석·추적·원격 코드가 없으며, 사용 권한은 <code>storage</code>와 <code>https://www.youtube.com/*</code>로 제한됩니다.</li>
+        <li>기능 제공에 필요한 설정, 사용자가 입력한 제외 채널·키워드, 현재 YouTube URL·페이지 요소·플레이어 상태·목록 메타데이터·챕터 정보와 관련 입력 이벤트를 처리합니다. 현재 탭에서 일시 처리하며 방문·시청 기록을 만들지 않습니다.</li>
+        <li>동영상 요약을 켠 상태에서 YouTube 질문하기에 기존 대화가 있으면, 중복 질문 방지를 위해 기존 사용자 턴에 고정 요약 문구가 있는지 확인하고 마지막 완료 요약을 찾습니다. 관련 없는 대화는 복사·저장하지 않습니다.</li>
+        <li>설정은 현재 브라우저 프로필의 <code>chrome.storage.local</code>에 저장되며 Chrome 동기화로 전송하지 않습니다. Google Drive 설정 동기화는 기본 OFF이며 사용자가 켠 경우에만 기기 로컬 UI 상태를 제외한 설정, 키별 수정 시각과 임의 기기 ID를 앱 전용 폴더에서 약 2분 간격으로 교환합니다.</li>
+        <li>대화형 Google 계정 선택창은 사용자의 명시적 동작에서만 열립니다. 최초 Drive 연결은 <code>drive.appdata</code>만 요청하고, 채널 관리 화면에서 구독 목록 연결을 누른 경우에만 <code>youtube</code> 관리 범위를 증분 요청합니다. 별도 이메일·프로필·연락처·일반 Drive 파일 권한은 요청하지 않습니다. 이메일은 동일 계정 무음 재인증용 <code>login_hint</code>로만 로컬에 보관하고 액세스 토큰은 background service worker와 <code>chrome.storage.session</code>에서만 다룹니다.</li>
+        <li>동기화를 켜거나 백업/복원을 실행하면 <code>settings.json</code>과 최대 5개 백업 JSON을 Drive <code>appDataFolder</code>에 저장합니다. 동기화 OFF와 연결 해제는 클라우드 파일을 삭제하지 않으며 복원 전에는 현재 설정을 자동 안전 백업합니다.</li>
+        <li>채널 폴더 기능은 기본 OFF입니다. 켜면 최대 2단계 폴더와 채널 ID·제목·페이지/썸네일 URL·배치·정렬·수정/삭제 메타데이터를 로컬에 저장하고, 채널 동기화를 별도로 켠 경우 <code>channel-library.json</code>을 Drive 앱 전용 폴더에서 약 2분 간격으로 교환합니다.</li>
+        <li>폴더 삭제·미분류 이동은 실제 YouTube 구독에 영향을 주지 않습니다. 별도 빨간 구독 해제 버튼과 대상 수·영향 경고를 확인한 경우에만 YouTube Data API로 선택한 실제 구독을 해제합니다.</li>
+        <li><strong>동영상 요약은 기본 OFF입니다.</strong> 켜면 지원되는 각 영상에서 고정 문구 “동영상을 요약해 줘”가 YouTube 질문하기에 한 번 자동 전송됩니다. Google/YouTube가 현재 영상·계정·페이지 문맥과 함께 처리할 수 있으며 개발자는 요청이나 답변을 받지 않습니다.</li>
+        <li>요약 답변 복제본은 현재 탭 메모리에만 유지되고 이동·새로고침·기능 해제 시 폐기됩니다. YouTube 네이티브 대화의 보존은 Google/YouTube 정책과 서비스 동작을 따릅니다.</li>
+        <li>광고·분석·추적·개발자 운영 서버·원격 코드가 없습니다. 앱 전용 Drive 설정/채널 동기화와 사용자가 요청한 YouTube 구독 조회·해제를 위해 <code>identity</code>, <code>storage</code>, <code>alarms</code>, Google API 호스트 권한을 사용하며 별도 이메일·프로필 OAuth 범위는 요청하지 않습니다.</li>
       </ul>
     </section>
   </main>
